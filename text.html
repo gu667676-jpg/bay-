@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM BREACHED</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #000;
+            color: #00ff00;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* خلفية تأثير الماتريكس المتحركة */
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), 
+                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 1;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.1; }
+            100% { opacity: 0.25; }
+        }
+
+        /* حاوية المقلب الرئيسية */
+        .hack-container {
+            position: relative;
+            z-index: 10;
+            background: rgba(10, 10, 10, 0.85);
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            animation: glitch 1s linear infinite;
+        }
+
+        /* تأثير اهتزاز الشاشة الخفيف */
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-1px, 1px) }
+            40% { transform: translate(-1px, -1px) }
+            60% { transform: translate(1px, 1px) }
+            80% { transform: translate(1px, -1px) }
+            100% { transform: translate(0) }
+        }
+
+        .warning-icon {
+            font-size: 50px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .highlight {
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        /* العداد التنازلي الوهمي */
+        .timer-box {
+            background: #111;
+            border: 1px dashed #ff0000;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .timer-label {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+
+        .countdown {
+            font-size: 32px;
+            color: #ff3333;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        /* زر التليجرام */
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+        }
+
+        .telegram-btn:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 25px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="matrix-bg"></div>
+
+    <div class="hack-container">
+        <div class="warning-icon">☠</div>
+        <h1>تم اختراق نظامك بنجاح!</h1>
+        
+        <p>أهلاً بك، أنا <span class="highlight">الهكر</span> الذي يسيطر على جهازك الآن. جميع ملفاتك، صورك، وحساباتك تم تشفيرها بالكامل وسحبها إلى خوادمنا الخاصة.</p>
+        
+        <p>أمامك خيار واحد فقط لإنقاذ بياناتك: <span class="highlight">ادفع لي الآن</span> وإلا سيتم مسح نظامك بالكامل ونشر فضائحك علناً!</p>
+
+        <div class="timer-box">
+            <div class="timer-label">الوقت المتبقي لتدمير البيانات تلقائياً:</div>
+            <div class="countdown" id="timer">00:29:59</div>
+        </div>
+
+        <p style="font-size: 16px; color: #ffcc00;">لتسوية الدفع وتجنب الكارثة، تواصل معي فوراً عبر زر التليجرام أدناه:</p>
+
+        <a href="https://t.me/M0D_O" target="_blank" class="telegram-btn">
+            تواصل مع الهكر لتجنب المسح @M0D_O
+        </a>
+
+        <div class="footer-text">
+            IP Address: Detected | Location: Traced | Status: Infected
+        </div>
+    </div>
+
+    <script>
+        // كود تشغيل العداد التنازلي الوهمي لزيادة الحماس والرعب في المقلب
+        let totalSeconds = 30 * 60; // 30 دقيقة
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            let hours = Math.floor(totalSeconds / 3600);
+            let minutes = Math.floor((totalSeconds % 3600) / 60);
+            let seconds = totalSeconds % 60;
+
+            // إضافة صفر على اليسار إذا كان الرقم خانة واحدة
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+
+            if (totalSeconds > 0) {
+                totalSeconds--;
+            } else {
+                timerElement.textContent = "00:00:00 - GAME OVER";
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
