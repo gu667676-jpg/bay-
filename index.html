@@ -1,180 +1,74 @@
-https://gu667676-jpg.github.io/bay-/            text-shadow: 0 0 8px #ffcc00;
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM BREACHED - خليج رامي</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
         }
 
-        /* العداد التنازلي الوهمي */
-        .timer-box {
-            background: #111;
-            border: 1px dashed #ff0000;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .timer-label {
-            font-size: 14px;
-            color: #aaa;
-            margin-bottom: 5px;
-        }
-
-        .countdown {
-            font-size: 32px;
-            color: #ff3333;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        /* زر التليجرام */
-        .telegram-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: transparent;
+        body {
+            background-color: #000;
             color: #00ff00;
-            border: 2px solid #00ff00;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-        }
-
-        .telegram-btn:hover {
-            background: #00ff00;
-            color: #000;
-            box-shadow: 0 0 25px #00ff00;
-            transform: scale(1.05);
-        }
-
-        .footer-text {
-            margin-top: 25px;
-            font-size: 12px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="matrix-bg"></div>
-
-    <div class="hack-container">
-        <img src="00.png" onerror="this.src='00.jpg'; this.onerror=function(){this.src='00.gif';};" alt="Target Locked" class="victim-img">
-        
-        <h1>تم اختراقك يا خليج رامي!</h1>
-        
-        <p>أهلاً بك يا <span class="highlight">خليج رامي</span>، تم رصد جهازك واختراقه بالكامل. جميع ملفاتك وحساباتك أصبحت تحت سيطرتي الآن.</p>
-        
-        <p>إذا كنت تريد استعادة بياناتك وجهازك، عليك دفع الفدية فوراً وبدون نقاش:</p>
-        
-        <span class="price-highlight">المبلغ المطلوب: 1,000,000,000$ دولار</span>
-        
-        <p>إذا لم يتم الدفع خلال الوقت المحدد أدناه، فسيتم تدمير جهازك وتسريب بياناتك لل
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .timer-label {
-            font-size: 14px;
-            color: #aaa;
-            margin-bottom: 5px;
-        }
-
-        .countdown {
-            font-size: 32px;
-            color: #ff3333;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        /* زر التليجرام */
-        .telegram-btn {
-            display: inline-flex;
-            align-items: center;
+            overflow-y: auto;
+            display: flex;
             justify-content: center;
-            gap: 10px;
-            background: transparent;
-            color: #00ff00;
-            border: 2px solid #00ff00;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            padding: 40px 0;
         }
 
-        .telegram-btn:hover {
-            background: #00ff00;
-            color: #000;
-            box-shadow: 0 0 25px #00ff00;
-            transform: scale(1.05);
+        /* خلفية الماتريكس */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.92)), 
+                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 1;
+            animation: pulse 4s infinite alternate;
         }
 
-        .footer-text {
-            margin-top: 25px;
-            font-size: 12px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="matrix-bg"></div>
-
-    <div class="hack-container">
-        <div class="warning-icon">☠</div>
-        <h1>تم اختراق نظامك بنجاح!</h1>
-        
-        <p>أهلاً بك، أنا <span class="highlight">الهكر</span> الذي يسيطر على جهازك الآن. جميع ملفاتك، صورك، وحساباتك تم تشفيرها بالكامل وسحبها إلى خوادمنا الخاصة.</p>
-        
-        <p>أمامك خيار واحد فقط لإنقاذ بياناتك: <span class="highlight">ادفع لي الآن</span> وإلا سيتم مسح نظامك بالكامل ونشر فضائحك علناً!</p>
-
-        <div class="timer-box">
-            <div class="timer-label">الوقت المتبقي لتدمير البيانات تلقائياً:</div>
-            <div class="countdown" id="timer">00:29:59</div>
-        </div>
-
-        <p style="font-size: 16px; color: #ffcc00;">لتسوية الدفع وتجنب الكارثة، تواصل معي فوراً عبر زر التليجرام أدناه:</p>
-
-        <a href="https://t.me/M0D_O" target="_blank" class="telegram-btn">
-            تواصل مع الهكر لتجنب المسح @M0D_O
-        </a>
-
-        <div class="footer-text">
-            IP Address: Detected | Location: Traced | Status: Infected
-        </div>
-    </div>
-
-    <script>
-        // كود تشغيل العداد التنازلي الوهمي لزيادة الحماس والرعب في المقلب
-        let totalSeconds = 30 * 60; // 30 دقيقة
-        const timerElement = document.getElementById('timer');
-
-        function updateTimer() {
-            let hours = Math.floor(totalSeconds / 3600);
-            let minutes = Math.floor((totalSeconds % 3600) / 60);
-            let seconds = totalSeconds % 60;
-
-            // إضافة صفر على اليسار إذا كان الرقم خانة واحدة
-            hours = hours < 10 ? '0' + hours : hours;
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            timerElement.textContent = `${hours}:${minutes}:${seconds}`;
-
-            if (totalSeconds > 0) {
-                totalSeconds--;
-            } else {
-                timerElement.textContent = "00:00:00 - GAME OVER";
-            }
+        @keyframes pulse {
+            0% { opacity: 0.1; }
+            100% { opacity: 0.25; }
         }
 
-        setInterval(updateTimer, 1000);
-    </script>
-</body>
-</html>
+        /* حاوية المقلب */
+        .hack-container {
+            position: relative;
+            z-index: 10;
+            background: rgba(15, 15, 15, 0.95);
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: glitch 1.5s linear infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-0.5px, 0.5px) }
+            40% { transform: translate(-0.5px, -0.5px) }
+            60% { transform: translate(0.5px, 0.5px) }
+            80% { transform: translate(0.5px, -0.5px) }
+            100% { transform: translate(0) }
+        }
+
+        /* تصميم الصورة المستطيلة الطولية (أبعاد سكرين الهاتف) */
+        .victim-img-container {
+            width: 100%;
+            max-width: 260px; /* عرض مناسب داخل الصندوق */
+            margin: 0 auto 25
