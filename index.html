@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYSTEM BREACHED</title>
+    <title>SYSTEM BREACHED - خليج رامي</title>
     <style>
         * {
             box-sizing: border-box;
@@ -15,17 +15,18 @@
         body {
             background-color: #000;
             color: #00ff00;
-            overflow: hidden;
+            overflow-y: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             position: relative;
+            padding: 20px 0;
         }
 
         /* خلفية تأثير الماتريكس المتحركة */
         .matrix-bg {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -46,9 +47,9 @@
         .hack-container {
             position: relative;
             z-index: 10;
-            background: rgba(10, 10, 10, 0.85);
-            border: 2px solid #00ff00;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            background: rgba(10, 10, 10, 0.9);
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
             padding: 40px;
             border-radius: 10px;
             text-align: center;
@@ -57,7 +58,6 @@
             animation: glitch 1s linear infinite;
         }
 
-        /* تأثير اهتزاز الشاشة الخفيف */
         @keyframes glitch {
             0% { transform: translate(0) }
             20% { transform: translate(-1px, 1px) }
@@ -67,16 +67,15 @@
             100% { transform: translate(0) }
         }
 
-        .warning-icon {
-            font-size: 50px;
-            color: #ff0000;
+        /* تنسيق الصورة المطلوبة في الأعلى */
+        .victim-img {
+            max-width: 180px;
+            max-height: 180px;
+            border-radius: 50%;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 15px #ff0000;
             margin-bottom: 20px;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            object-fit: cover;
         }
 
         h1 {
@@ -101,11 +100,86 @@
             text-shadow: 0 0 5px #00ff00;
         }
 
+        .price-highlight {
+            color: #ffcc00;
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin: 15px 0;
+            text-shadow: 0 0 8px #ffcc00;
+        }
+
         /* العداد التنازلي الوهمي */
         .timer-box {
             background: #111;
             border: 1px dashed #ff0000;
             padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .timer-label {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+
+        .countdown {
+            font-size: 32px;
+            color: #ff3333;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        /* زر التليجرام */
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: transparent;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+        }
+
+        .telegram-btn:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 25px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="matrix-bg"></div>
+
+    <div class="hack-container">
+        <img src="00.png" onerror="this.src='00.jpg'; this.onerror=function(){this.src='00.gif';};" alt="Target Locked" class="victim-img">
+        
+        <h1>تم اختراقك يا خليج رامي!</h1>
+        
+        <p>أهلاً بك يا <span class="highlight">خليج رامي</span>، تم رصد جهازك واختراقه بالكامل. جميع ملفاتك وحساباتك أصبحت تحت سيطرتي الآن.</p>
+        
+        <p>إذا كنت تريد استعادة بياناتك وجهازك، عليك دفع الفدية فوراً وبدون نقاش:</p>
+        
+        <span class="price-highlight">المبلغ المطلوب: 1,000,000,000$ دولار</span>
+        
+        <p>إذا لم يتم الدفع خلال الوقت المحدد أدناه، فسيتم تدمير جهازك وتسريب بياناتك لل
             margin-bottom: 30px;
             border-radius: 5px;
         }
